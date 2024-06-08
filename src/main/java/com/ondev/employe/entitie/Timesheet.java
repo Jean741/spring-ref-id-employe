@@ -1,4 +1,4 @@
-package com.ondev.employe;
+package com.ondev.employe.entitie;
 
 import jakarta.persistence.*;
 import lombok.Data;
