@@ -1,12 +1,19 @@
 package com.ondev.employe.entitie;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * @author MJean-Claude
  */
 @Data
 @Entity
+@Builder(toBuilder = true)
+@AllArgsConstructor
+@NoArgsConstructor
 public class Timesheet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

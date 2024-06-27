@@ -1,10 +1,10 @@
 package com.ondev.employe.repository;
 
 import com.ondev.employe.entitie.Timesheet;
+import com.ondev.employe.projections.TimesheetProjection;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import com.ondev.employe.projections.TimesheetProjection;
 /**
  * @author MJean-Claude
  */
