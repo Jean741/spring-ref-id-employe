@@ -1,10 +1,10 @@
 package com.ondev.employe.entitie;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 /**
  * @author MJean-Claude
@@ -14,6 +14,10 @@ import lombok.NoArgsConstructor;
 @Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString(exclude = "employee")
+@JsonSerialize
+@JsonDeserialize
+@JsonInclude(value = JsonInclude.Include.NON_NULL)
 public class Timesheet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
